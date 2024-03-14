@@ -13,8 +13,7 @@ Exercice C #1
 #include <stdio.h>
 #include <stdlib.h>
 int main()
-{
-    int choix = 0;
+{int choix = 0;
     printf("choisissez un nombre :\n" );
     scanf("%d", &choix);
     printf("le nombre choisit représente %o en octal \n", choix);
