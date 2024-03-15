@@ -44,13 +44,19 @@ else if (somme_a_payer == somme_a_prendre)
     }
 else 
 {
-    printf("pour la somme de %.2f ,nous vous rendons : %.2f euro\n", somme_a_payer, difference);
+    printf("pour la somme de %.2f ,nous devons vous rendre : %.2f euro\n", somme_a_payer, difference);
 
 }
 
 while (difference != 0 )
-{
-    if (difference >20)
+{ 
+    if (difference > 79)
+    {
+        printf("mais nous n'avons pas assez de monnaie, merci de faire l'appoint");
+        return 0;
+    }
+
+   else if (difference >20)
     {
          difference= difference-billet_de_vingt;
          printf("voici un billet de 20 +");
@@ -63,7 +69,7 @@ while (difference != 0 )
     else if (difference>=5) 
     { 
         difference = difference-billet_de_cinq;
-        printf("voici un billet de 5 ");
+        printf("voici un billet de 5 +");
    }
     else if (difference >= 2)
    {
@@ -76,10 +82,14 @@ while (difference != 0 )
             printf("voici une piece  de 1 euro +");
 
    }
-   else if (difference <=0)
+   else if (difference <1)
    {
-    difference = 0;
-         printf("et %f centime", difference);
+   printf("et %.2f centime", difference);
+             difference = difference-difference ;
+        
+     
+        // difference = 0;
+         
    }
    else
    {
